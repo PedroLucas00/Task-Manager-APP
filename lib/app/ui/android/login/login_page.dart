@@ -49,7 +49,7 @@ class LoginPage extends GetView<LoginController> {
                               onPressed: () {},
                               icon: Icon(
                                 FontAwesomeIcons.eyeSlash,
-                                size: 20,
+                                size: 18,
                               ),
                             )),
                       ),
@@ -102,7 +102,9 @@ class LoginPage extends GetView<LoginController> {
                           TextStyle(color: Color.fromARGB(255, 110, 110, 110)),
                     ),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.toNamed('/sign_up');
+                        },
                         child: Text(
                           'Register',
                           style: TextStyle(color: appThemeData.primaryColor),
