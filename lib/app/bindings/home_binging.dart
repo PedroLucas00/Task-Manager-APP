@@ -4,9 +4,8 @@ import 'package:task_manager/app/data/provider/api.dart';
 import 'package:task_manager/app/data/repository/home_repository.dart';
 
 class HomeBinding implements Bindings {
-@override
-void dependencies() {
-  Get.lazyPut<HomeController>(() => HomeController(
-     HomeRepository(Api())));
+  @override
+  void dependencies() {
+    Get.lazyPut<HomeController>(() => HomeController());
   }
 }
