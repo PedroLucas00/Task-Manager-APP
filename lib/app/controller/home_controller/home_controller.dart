@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:task_manager/app/data/repository/home_repository.dart';
 
 class HomeController extends GetxController {
   RxInt selectedPageIndex = 0.obs;
 
+  @override
   void onInit() {
     selectedPageIndex.value = 0;
     super.onInit();

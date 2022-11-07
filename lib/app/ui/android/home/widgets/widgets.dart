@@ -13,30 +13,36 @@ Widget bottomNavigationBar() {
       showSelectedLabels: false,
       showUnselectedLabels: false,
       elevation: 6,
+      type: BottomNavigationBarType.fixed,
       items: [
         BottomNavigationBarItem(
-            icon: Image.asset(
-              'images/bottomBarIcons/${controller.selectedPageIndex.value == 0 ? "house-actived.png" : "house-desactived.png"}',
-              scale: 18,
+            icon: Container(
+              margin: EdgeInsets.symmetric(vertical: 8),
+              child: Image.asset(
+                'images/bottomBarIcons/${controller.selectedPageIndex.value == 0 ? "house-actived.png" : "house-desactived.png"}',
+                scale: 20,
+              ),
             ),
             label: ''),
         BottomNavigationBarItem(
             icon: Image.asset(
               'images/bottomBarIcons/${controller.selectedPageIndex.value == 1 ? "to-do-list-actived.png" : "to-do-list-desactived.png"}',
-              scale: 18,
+              scale: 20,
             ),
             label: ''),
         BottomNavigationBarItem(
             icon: Icon(
               FontAwesomeIcons.bell,
-              color:controller.selectedPageIndex.value == 2 ? Colors.black : Color.fromARGB(255, 144, 144, 144),
-              size: 25,
+              color: controller.selectedPageIndex.value == 2
+                  ? Colors.black
+                  : Color.fromARGB(255, 144, 144, 144),
+              size: 22,
             ),
             label: ''),
         BottomNavigationBarItem(
             icon: Image.asset(
               'images/bottomBarIcons/${controller.selectedPageIndex.value == 3 ? "setting-actived.png" : "setting-desactived.png"}',
-              scale: 18,
+              scale: 20,
             ),
             label: '')
       ]);
