@@ -71,7 +71,9 @@ class LoginPage extends GetView<LoginController> {
                 Padding(
                   padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
                   child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed('/home');
+                      },
                       style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all<Color>(
                               appThemeData.primaryColor),
