@@ -101,7 +101,6 @@ class HomePage extends GetView<HomeController> {
           ],
         ),
       )),
-      bottomNavigationBar: bottomNavigationBar(),
     );
   }
 }
