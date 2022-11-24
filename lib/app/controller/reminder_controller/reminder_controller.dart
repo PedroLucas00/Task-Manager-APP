@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 
 class ReminderController extends GetxController {
   RxInt selectedMonth = 0.obs;
+  RxInt selectedDayOfMonth = 0.obs;
 
   List listOfMonths = [
     'January',
