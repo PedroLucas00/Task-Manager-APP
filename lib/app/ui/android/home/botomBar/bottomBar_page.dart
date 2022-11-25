@@ -5,18 +5,20 @@ import 'package:task_manager/app/ui/android/category/category_page.dart';
 import 'package:task_manager/app/ui/android/home/home_page.dart';
 import 'package:task_manager/app/ui/android/home/widgets/widgets.dart';
 import 'package:task_manager/app/ui/android/reminder/reminder_page.dart';
+import 'package:task_manager/app/ui/android/setting/setting_page.dart';
 
 class BottomBarPage extends GetView<HomeController> {
   List<Widget> pageOptions = <Widget>[
     HomePage(),
     CategoryPage(),
     ReminderPage(),
-    HomePage(),
+    SettingPage(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         body: GetX<HomeController>(
             init: HomeController(),
             builder: (controller) {
